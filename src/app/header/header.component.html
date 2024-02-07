@@ -5,12 +5,12 @@
 </nav>
 <nav class="navbar navbar-default" *ngIf="gameStarted">
     <div class="col-4">
-        <p class="green-text">{{gameName}}</p>
+        <p class="green-text">{{game.name}}</p>
     </div>
     <div class="col-4">
-        <p class="green-text">Frame {{frameNumber}}</p>
+        <p class="green-text">Frame {{game.getFrameNumber()}}</p>
     </div>
     <div class="col-4">
-        <p class="green-text">Rozbija {{breakFor}}</p>
+        <p class="green-text">Rozbija {{game.getFrame().playerToBreak}}</p>
     </div>
 </nav>

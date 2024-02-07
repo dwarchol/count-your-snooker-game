@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Game } from '../game';
 
 @Component({
   selector: 'app-header',
@@ -6,8 +7,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  @Input() gameName: string;
-  @Input() frameNumber: number;
-  @Input() breakFor: string;
+  @Input() game: Game;
   @Input() gameStarted: boolean;
 }

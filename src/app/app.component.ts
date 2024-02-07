@@ -9,9 +9,13 @@ import { Game } from './game';
 export class AppComponent {
   title = 'count-your-snooker-game';
   game: Game;
-  gameStarted = true;
+  gameStarted = false;
   
   constructor() {
-    this.game = new Game(); //temp
+  }
+
+  startGame(event:{name: string, gameMode: number}){
+    this.gameStarted = true;
+    this.game = new Game(event.name, event.gameMode)
   }
 }

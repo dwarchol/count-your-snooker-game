@@ -3,12 +3,14 @@ import { Player } from "./player";
 
 export class Game {
     name: string;
+    gameMode: number;
     frames: Array<Frame>;
     player1: Player;
     player2: Player;
 
-    constructor(){
-        this.name = "Test" //temp
+    constructor(name: string, gameMode: number){
+        this.name = name;
+        this.gameMode = gameMode;
         this.frames = [];
         this.frames.push(new Frame(1)); //temp
     }

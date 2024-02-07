@@ -1,3 +1,13 @@
-html {
+body {
     background-color: #31572C;
+}
+.view-card {
+    background-color: #4F772D;
+    border: #00250F solid 1px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.80);
+    border-radius: 10px;
+    margin: 2vh;
+    padding: 10px;
+    height: 90vh ;
+    text-align: center;   
 }

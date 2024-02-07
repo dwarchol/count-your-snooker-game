@@ -1,6 +1,15 @@
 <app-header 
   [gameStarted]="gameStarted"
-  [gameName]="game.name"
-  [frameNumber]="game.getFrameNumber()"
-  [breakFor]="game.getFrame().playerToBreak"
+  [game]="game"
 ></app-header>
+<div class="row">
+  <div class="col-sm-4">
+  
+  </div>
+  <div class="col-sm-4">
+    <app-game-settings (startGame)="startGame($event)"></app-game-settings>
+  </div>
+  <div class="col-sm-4">
+    
+  </div>
+</div>
