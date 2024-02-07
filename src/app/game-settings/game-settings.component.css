@@ -1,18 +1,21 @@
 button {
     border-radius: 10px;
     width: 60%;
-    max-width: 180px;
-    padding-block: 3px;
+    max-width: 300px;
+    padding-block: 6px;
     margin-top: 5px;
     background-color: #c7f3bb70; 
     border: #00250F 1px solid;
+}
+.row {
+    align-items: center;
 }
 .name-input {
     background-color: #D9D9D920; 
     border-radius: 10px;
     border: #00250F 1px solid;
-    max-width: 220px;
-    width: 100%;
+    max-width: 420px;
+    width: 90%;
     padding-left: 8px;
     margin-bottom: 15px;
 }
