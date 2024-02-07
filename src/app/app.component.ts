@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Game } from './game';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'count-your-snooker-game';
+  game: Game;
+  gameStarted = true;
+  
+  constructor() {
+    this.game = new Game(); //temp
+  }
 }

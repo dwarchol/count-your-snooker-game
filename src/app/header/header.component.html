@@ -1,0 +1,16 @@
+<nav class="navbar navbar-default" *ngIf="!gameStarted">
+    <div class="col-12">
+        <p class="green-text">Count Your Snooker Game</p>
+    </div>
+</nav>
+<nav class="navbar navbar-default" *ngIf="gameStarted">
+    <div class="col-4">
+        <p class="green-text">{{gameName}}</p>
+    </div>
+    <div class="col-4">
+        <p class="green-text">Frame {{frameNumber}}</p>
+    </div>
+    <div class="col-4">
+        <p class="green-text">Rozbija {{breakFor}}</p>
+    </div>
+</nav>
