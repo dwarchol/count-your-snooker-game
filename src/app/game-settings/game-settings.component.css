@@ -1,12 +1,3 @@
-button {
-    border-radius: 10px;
-    width: 60%;
-    max-width: 300px;
-    padding-block: 6px;
-    margin-top: 5px;
-    background-color: #c7f3bb70; 
-    border: #00250F 1px solid;
-}
 .row {
     align-items: center;
 }
@@ -19,7 +10,3 @@ button {
     padding-left: 8px;
     margin-bottom: 15px;
 }
-::placeholder {
-    color: #000000B0;
-    opacity: 1; /* Firefox */
-  }

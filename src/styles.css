@@ -12,3 +12,42 @@ body {
     height: 90vh ;
     text-align: center;
 }
+.custom-button {
+    border-radius: 10px;
+    width: 60%;
+    max-width: 300px;
+    padding-block: 6px;
+    margin-top: 5px;
+    background-color: #c7f3bb70; 
+    border: #00250F 1px solid;
+}
+.custom-button-dark {
+    border-radius: 10px;
+    width: 60%;
+    max-width: 300px;
+    padding-block: 6px;
+    margin-top: 5px;
+    background-color: #00250F;
+    color: #c9c9c9;
+    border: #001c0b 1px solid;
+}
+.text-input {
+    background-color: #D9D9D920; 
+    border-radius: 10px;
+    border: #00250F 1px solid;
+    max-width: 420px;
+    width: 90%;
+    padding-left: 8px;
+    margin-bottom: 15px;
+}
+.left {
+    text-align: left;
+}
+.right {
+    text-align: right;
+}
+
+::placeholder {
+    color: #000000B0;
+    opacity: 1; /* Firefox */
+  }

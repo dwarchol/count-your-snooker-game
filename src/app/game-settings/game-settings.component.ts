@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-game-settings',
@@ -6,6 +6,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./game-settings.component.css']
 })
 export class GameSettingsComponent {
+  @Input() isGameStartable: boolean;
   @Output() startGame = new EventEmitter<{name: string, gameMode: number}>();
   gameMode = 15;
 

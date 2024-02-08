@@ -5,8 +5,18 @@
     <app-draw-balls [size]="6" [selected]="gameMode==6" (click)="selectMode(6)"></app-draw-balls>
     <br/>
     <br/>
-    <button (click)="start(gameName.value)">Zacznij partię</button>
+    <button 
+        class="custom-button" 
+        (click)="start(gameName.value)"
+        [disabled]="!isGameStartable"
+    >Zacznij partię</button>
     <!-- TODO db-->
-    <button disabled>Załaduj partię</button>
-    <button disabled>Dodaj gracza</button>
+    <button 
+        class="custom-button" 
+        disabled
+        >Załaduj partię</button>
+    <button 
+        class="custom-button" 
+        disabled
+        >Dodaj gracza</button>
 </div>
