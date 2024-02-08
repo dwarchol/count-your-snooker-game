@@ -7,6 +7,8 @@ import { GameSettingsComponent } from './game-settings/game-settings.component';
 import { DrawBallsComponent } from './game-settings/draw-balls/draw-balls.component';
 import { PlayAsGuestComponent } from './select-player/play-as-guest/play-as-guest.component';
 import { PlayerSelectedComponent } from './select-player/player-selected/player-selected.component';
+import { PlayerScoreComponent } from './player-score/player-score.component';
+import { BreakComponent } from './player-score/break/break.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { PlayerSelectedComponent } from './select-player/player-selected/player-
     GameSettingsComponent,
     DrawBallsComponent,
     PlayAsGuestComponent,
-    PlayerSelectedComponent
+    PlayerSelectedComponent,
+    PlayerScoreComponent,
+    BreakComponent
   ],
   imports: [
     BrowserModule

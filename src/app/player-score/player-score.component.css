@@ -1,0 +1,22 @@
+h1 {
+    font-size: 60px;
+}
+h2 {
+    display: inline;
+    font-size: 90px;
+}
+h3 {
+    display: inline;
+    font-size: 120px;
+}
+h4 {
+    font-size: 30px;
+}
+.custom-button {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+.view-card {
+    position: relative;
+}

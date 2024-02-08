@@ -4,13 +4,21 @@
 ></app-header>
 <div class="row">
   <div class="col-sm-4">
+    <app-player-score
+      *ngIf="gameStarted"
+      [playerName]="game.player1.name"
+      [playerNumber]="1"
+      [points]="game.getFrame().player1Points"
+      [frames]="game.player1Frames"
+      (giveUp)="playerGaveUp(1)"
+    ></app-player-score>
     <app-play-as-guest 
-      *ngIf="gameStarted==false && !player1"
+      *ngIf="!gameStarted && !player1"
       [playerNumber]="1"
       (selectPlayer)="selectPlayer($event, 1)"
       ></app-play-as-guest>
     <app-player-selected 
-      *ngIf="gameStarted==false && player1"
+      *ngIf="!gameStarted && player1"
       [playerName]="player1.name"
       [playerNumber]="1"
     ></app-player-selected>
@@ -22,6 +30,14 @@
     ></app-game-settings>
   </div>
   <div class="col-sm-4">
+    <app-player-score
+      *ngIf="gameStarted"
+      [playerName]="game.player2.name"
+      [playerNumber]="2"
+      [points]="game.getFrame().player2Points"
+      [frames]="game.player2Frames"
+      (giveUp)="playerGaveUp(2)"
+    ></app-player-score>
     <app-play-as-guest 
       *ngIf="gameStarted==false && !player2"
       [playerNumber]="2"

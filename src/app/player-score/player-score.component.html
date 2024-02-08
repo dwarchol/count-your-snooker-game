@@ -1,0 +1,13 @@
+<div class="view-card">
+    <h1 [ngClass]="{left: playerNumber==1, right: playerNumber==2}">{{playerName}}</h1>
+    <br/>
+    <br/>
+    <div class="d-flex justify-content-between">
+        <h3 *ngIf="playerNumber==1" class="left">{{frames}}</h3>
+        <h2 [ngClass]="{left: playerNumber==1, right: playerNumber==2}">{{points}}</h2>
+        <h3 *ngIf="playerNumber==2" class="right">{{frames}}</h3>
+    </div>
+    <h4>Break</h4>
+    <app-break></app-break>
+    <button class="custom-button" (click)="giveUpBtn()">Poddaj się</button>
+</div>>

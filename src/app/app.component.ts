@@ -27,6 +27,10 @@ export class AppComponent {
   }
   startGame(event:{name: string, gameMode: number}){
     this.gameStarted = true;
-    this.game = new Game(event.name, event.gameMode)
+    this.game = new Game(event.name, event.gameMode, this.player1, this.player2)
+    this.game.addFirstFrame(1); //temp
+  }
+  playerGaveUp(player: number){
+
   }
 }
