@@ -9,6 +9,10 @@ import { PlayAsGuestComponent } from './select-player/play-as-guest/play-as-gues
 import { PlayerSelectedComponent } from './select-player/player-selected/player-selected.component';
 import { PlayerScoreComponent } from './player-score/player-score.component';
 import { BreakComponent } from './player-score/break/break.component';
+import { FormsModule } from '@angular/forms';
+import { StrokeViewComponent } from './stroke-view/stroke-view.component';
+import { RedBallComponent } from './stroke-view/red-ball/red-ball.component';
+import { ColorBallComponent } from './stroke-view/color-ball/color-ball.component';
 
 @NgModule({
   declarations: [
@@ -19,10 +23,14 @@ import { BreakComponent } from './player-score/break/break.component';
     PlayAsGuestComponent,
     PlayerSelectedComponent,
     PlayerScoreComponent,
-    BreakComponent
+    BreakComponent,
+    StrokeViewComponent,
+    RedBallComponent,
+    ColorBallComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

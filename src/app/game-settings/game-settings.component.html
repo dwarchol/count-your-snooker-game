@@ -1,5 +1,5 @@
 <div class="view-card">
-    <input type="text" class="name-input" placeholder="Nazwa partii" #gameName>
+    <input type="text" class="name-input" placeholder="Nazwa partii" [(ngModel)]="gameName">
     <app-draw-balls [size]="15" [selected]="gameMode==15" (click)="selectMode(15)"></app-draw-balls>
     <app-draw-balls [size]="10" [selected]="gameMode==10" (click)="selectMode(10)"></app-draw-balls>
     <app-draw-balls [size]="6" [selected]="gameMode==6" (click)="selectMode(6)"></app-draw-balls>
@@ -7,8 +7,8 @@
     <br/>
     <button 
         class="custom-button" 
-        (click)="start(gameName.value)"
-        [disabled]="!isGameStartable"
+        (click)="start()"
+        [disabled]="!isGameStartable || gameName===''"
     >Zacznij partię</button>
     <!-- TODO db-->
     <button 

@@ -1,0 +1,8 @@
+.color-ball-button{
+    width: 20%;
+    padding-top: 20%;
+    margin: 1%;
+    position: relative;
+    border-radius: 50%;
+    border: 1px solid black
+}

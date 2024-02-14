@@ -20,3 +20,12 @@ h4 {
 .view-card {
     position: relative;
 }
+.white-circle{
+    background-color: #D9D9D9;
+    width: 25px;
+    height: 25px;
+    margin: 1%;
+    position: relative;
+    border-radius: 50%;
+    border: 1px solid black
+}

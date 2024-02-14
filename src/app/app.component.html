@@ -8,6 +8,7 @@
       *ngIf="gameStarted"
       [playerName]="game.player1.name"
       [playerNumber]="1"
+      [playing]="player1AtTheTable"
       [points]="game.getFrame().player1Points"
       [frames]="game.player1Frames"
       (giveUp)="playerGaveUp(1)"
@@ -24,16 +25,26 @@
     ></app-player-selected>
   </div>
   <div class="col-sm-4">
-    <app-game-settings 
+    <app-game-settings
+      *ngIf="!gameStarted" 
       [isGameStartable]="player1 && player2"
       (startGame)="startGame($event)"
     ></app-game-settings>
+    <app-stroke-view
+      *ngIf="gameStarted"
+      [gameMode]="game.gameMode"
+      (addPoints)="addPoints($event)"
+      (miss)="miss()"
+      (safe)="safe()"
+      (foul)="foul($event)"
+    ></app-stroke-view>
   </div>
   <div class="col-sm-4">
     <app-player-score
       *ngIf="gameStarted"
       [playerName]="game.player2.name"
       [playerNumber]="2"
+      [playing]="!player1AtTheTable"
       [points]="game.getFrame().player2Points"
       [frames]="game.player2Frames"
       (giveUp)="playerGaveUp(2)"

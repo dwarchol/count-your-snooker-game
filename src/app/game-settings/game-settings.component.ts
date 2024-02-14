@@ -9,12 +9,13 @@ export class GameSettingsComponent {
   @Input() isGameStartable: boolean;
   @Output() startGame = new EventEmitter<{name: string, gameMode: number}>();
   gameMode = 15;
+  gameName = '';
 
   selectMode(value: number){
     this.gameMode = value;
   }
 
-  start(name: string){
-    this.startGame.emit({name: name, gameMode: this.gameMode})
+  start(){
+    this.startGame.emit({name: this.gameName, gameMode: this.gameMode})
   }
 }

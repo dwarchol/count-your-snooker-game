@@ -8,6 +8,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class PlayerScoreComponent {
   @Input() playerName: string;
   @Input() playerNumber: number;
+  @Input() playing: boolean;
   @Input() points: number;
   @Input() frames: number;
   @Output() giveUp = new EventEmitter<null>();
