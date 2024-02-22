@@ -7,6 +7,9 @@
     border-radius: 50%;
     border: 1px solid black
 }
+.disabled {
+    background-color: #AD090950;
+}
 .text {
     position: absolute;
     left: 0; 

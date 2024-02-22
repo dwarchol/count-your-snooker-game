@@ -67,15 +67,17 @@ export class AppComponent {
     this.addHistory(new HistoryItem(HistoryItemType.safe, (this.player1AtTheTable ? 1 : 2)))
     this.player1AtTheTable = !this.player1AtTheTable;
   }
-  foul(value: number) {
+  foul(event) {
+    var value = event.value; 
     if (this.player1AtTheTable) {
       this.addHistory(new HistoryItem(HistoryItemType.foul, 1, value));
       this.game.getFrame().player2Points += value;
-      this.player1AtTheTable = !this.player1AtTheTable;
     }
     else {
       this.addHistory(new HistoryItem(HistoryItemType.foul, 2, value));
       this.game.getFrame().player1Points += value;
+    }
+    if(!event.givePlay){
       this.player1AtTheTable = !this.player1AtTheTable;
     }
   }

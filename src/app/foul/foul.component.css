@@ -1,6 +1,7 @@
 .foul-view {
     background-color: #31572C;
     border: #00250F solid 1px;
+    color: #d9d9d9;
     font-size: x-large;
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.80);
     border-radius: 10px;

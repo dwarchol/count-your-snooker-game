@@ -1,11 +1,11 @@
 <div class="view-card">
     <app-red-ball [numberOfReds]="numberOfRed" (click)="addRed()"></app-red-ball>
-    <app-color-ball [color]="'#D6CE14'" [value]="2" [disabled]="!colorBall" (click)="addValue(2)"></app-color-ball>
-    <app-color-ball [color]="'#04C10C'" [value]="3" [disabled]="!colorBall" (click)="addValue(3)"></app-color-ball>
-    <app-color-ball [color]="'#4F3030'" [value]="4" [disabled]="!colorBall" (click)="addValue(4)"></app-color-ball>
-    <app-color-ball [color]="'#2336E2'" [value]="5" [disabled]="!colorBall" (click)="addValue(5)"></app-color-ball>
-    <app-color-ball [color]="'#E831EC'" [value]="6" [disabled]="!colorBall" (click)="addValue(6)"></app-color-ball>
-    <app-color-ball [color]="'#000000'" [value]="7" [disabled]="!colorBall" (click)="addValue(7)"></app-color-ball>
+    <app-color-ball [fb]="isFreeBall && nextColor<2" [color]="'#D6CE14'" [value]="2" [disabled]="isDisabled(2)" (click)="addValue(2)"></app-color-ball>
+    <app-color-ball [fb]="isFreeBall && nextColor<3" [color]="'#04C10C'" [value]="3" [disabled]="isDisabled(3)" (click)="addValue(3)"></app-color-ball>
+    <app-color-ball [fb]="isFreeBall && nextColor<4" [color]="'#4F3030'" [value]="4" [disabled]="isDisabled(4)" (click)="addValue(4)"></app-color-ball>
+    <app-color-ball [fb]="isFreeBall && nextColor<5" [color]="'#2336E2'" [value]="5" [disabled]="isDisabled(5)" (click)="addValue(5)"></app-color-ball>
+    <app-color-ball [fb]="isFreeBall && nextColor<6" [color]="'#E831EC'" [value]="6" [disabled]="isDisabled(6)" (click)="addValue(6)"></app-color-ball>
+    <app-color-ball [fb]="isFreeBall && nextColor<7" [color]="'#000000'" [value]="7" [disabled]="isDisabled(7)" (click)="addValue(7)"></app-color-ball>
     <br/>
     <br/>
     <br/>

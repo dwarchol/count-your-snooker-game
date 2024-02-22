@@ -1,3 +1,5 @@
-<button class="red-ball-button">
+<button *ngIf="numberOfReds>0" class="red-ball-button">
     <div class="text">{{numberOfReds}}</div>
+</button>
+<button *ngIf="numberOfReds<=0" class="red-ball-button disabled">
 </button>
