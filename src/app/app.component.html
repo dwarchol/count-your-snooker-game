@@ -34,6 +34,7 @@
       *ngIf="gameStarted"
       [gameMode]="game.gameMode"
       (addPoints)="addPoints($event)"
+      (addFoul)="foul($event)"
       (miss)="miss()"
       (safe)="safe()"
       (undo)="undo()"

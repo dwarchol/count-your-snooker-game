@@ -8,12 +8,14 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class StrokeViewComponent implements OnInit {
   @Input() gameMode: number;
   @Output() addPoints = new EventEmitter<number>();
+  @Output("addFoul") foulEmitter = new EventEmitter<number>();
   @Output() miss = new EventEmitter<null>();
   @Output() safe = new EventEmitter<null>();
   @Output() foul = new EventEmitter<number>();
   @Output() undo = new EventEmitter<null>();
   numberOfRed: number;
   colorBall = false;
+  isFoul = false;
 
   ngOnInit(): void {
     this.numberOfRed = this.gameMode;
@@ -35,6 +37,14 @@ export class StrokeViewComponent implements OnInit {
   }
   missBtn() { this.miss.emit() }
   safeBtn() { this.safe.emit() }
-  foulBtn() { }
+  foulBtn() { this.isFoul = true }
   undoBtn() { this.undo.emit() }
+  closeFaul(){
+    this.isFoul = false;
+  }
+  addFoul(event){
+    this.isFoul = false;
+    this.foulEmitter.emit(event.value);
+    this.numberOfRed -= event.removeRed;
+  }
 }

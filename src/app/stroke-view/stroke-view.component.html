@@ -12,6 +12,6 @@
     <button class="custom-button" (click)="missBtn()">Pudło</button>
     <button class="custom-button" (click)="safeBtn()">Odstawna</button>
     <button class="custom-button"(click)="foulBtn()">Faul</button>
+    <app-foul *ngIf="isFoul" [redLeft]="numberOfRed" (closeTab)="closeFaul()" (addFoul)="addFoul($event)"></app-foul>
     <i class="bi bi-arrow-counterclockwise" (click)="undoBtn()"></i>
-    <!-- <app-foul></app-foul> -->
 </div>

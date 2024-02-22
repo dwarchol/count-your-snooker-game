@@ -1,5 +1,7 @@
 <div class="foul-view">
+    <i class="bi bi-x-lg close" (click)="close()"></i>
     <h4>FAUL</h4>
+    <br/>
     <div class="row">
         <div class="col-3">
             <app-foul-points [value]="4" [isChoosen]="choosenValue===4" (click)="choose(4)"></app-foul-points>
@@ -14,5 +16,11 @@
             <app-foul-points [value]="7" [isChoosen]="choosenValue===7" (click)="choose(7)"></app-foul-points>
         </div>
     </div>
-    <button class="custom-button">Dodaj</button>
+    <div>
+        <i class="bi bi-caret-left-fill" *ngIf="removeReds>0" (click)="decreaseRed()"></i>
+        {{removeReds}}
+        <i class="bi bi-caret-right-fill" *ngIf="removeReds<redLeft" (click)="increaseRed()"></i>
+        Usuń czerwone
+    </div>
+        <button class="custom-button" (click)="add()">Dodaj</button>
 </div>
