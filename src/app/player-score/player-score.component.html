@@ -1,9 +1,13 @@
 <div class="view-card">
-    <div class="d-flex justify-content-between">
-        <div *ngIf="playerNumber==2 && playing" class="white-circle right"></div>
-        <h1 [ngClass]="{left: playerNumber==2, right: playerNumber==1}">{{playerName}}</h1>
-        <div *ngIf="playerNumber==1 && playing" class="white-circle left"></div>
+    <div class="d-flex justify-content-between" *ngIf="playerNumber==1">
+        <h1 class="left">{{playerName}}</h1>
+        <div *ngIf="playing" class="white-circle right"></div>
     </div> 
+    <div class="d-flex justify-content-between" *ngIf="playerNumber==2">
+        <div *ngIf="playing" class="white-circle left"></div>
+        <div *ngIf="!playing" class="left"></div> 
+        <h1 class="right">{{playerName}}</h1>
+    </div>
     <br/>
     <br/>
     <div class="d-flex justify-content-between">

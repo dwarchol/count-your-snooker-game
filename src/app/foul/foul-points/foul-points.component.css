@@ -1,0 +1,29 @@
+.circle{
+    color: #d9d9d9;
+    background-color: #02310f;
+    width: 100%;
+    padding-top: 100%;
+    margin: 1%;
+    position: relative;
+    border: #d9d9d9 solid 3px;
+    border-radius: 50%;
+}
+.text {
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    top: calc(50% - 3vw);
+    font-size: 3.8vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+.choosen {
+    color: #02310f;
+    background-color: #d9d9d9;
+    width: 100%;
+    padding-top: 100%;
+    margin: 1%;
+    position: relative;
+    border: #02310f solid 3px;
+    border-radius: 50%;
+}

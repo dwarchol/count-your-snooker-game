@@ -1,0 +1,18 @@
+<div class="foul-view">
+    <h4>FAUL</h4>
+    <div class="row">
+        <div class="col-3">
+            <app-foul-points [value]="4" [isChoosen]="choosenValue===4" (click)="choose(4)"></app-foul-points>
+        </div>
+        <div class="col-3">
+            <app-foul-points [value]="5" [isChoosen]="choosenValue===5" (click)="choose(5)"></app-foul-points>
+        </div>
+        <div class="col-3">
+            <app-foul-points [value]="6" [isChoosen]="choosenValue===6" (click)="choose(6)"></app-foul-points>
+        </div>
+        <div class="col-3">
+            <app-foul-points [value]="7" [isChoosen]="choosenValue===7" (click)="choose(7)"></app-foul-points>
+        </div>
+    </div>
+    <button class="custom-button">Dodaj</button>
+</div>

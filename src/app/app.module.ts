@@ -13,6 +13,8 @@ import { FormsModule } from '@angular/forms';
 import { StrokeViewComponent } from './stroke-view/stroke-view.component';
 import { RedBallComponent } from './stroke-view/red-ball/red-ball.component';
 import { ColorBallComponent } from './stroke-view/color-ball/color-ball.component';
+import { FoulComponent } from './foul/foul.component';
+import { FoulPointsComponent } from './foul/foul-points/foul-points.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { ColorBallComponent } from './stroke-view/color-ball/color-ball.componen
     BreakComponent,
     StrokeViewComponent,
     RedBallComponent,
-    ColorBallComponent
+    ColorBallComponent,
+    FoulComponent,
+    FoulPointsComponent
   ],
   imports: [
     BrowserModule,

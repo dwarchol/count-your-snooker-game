@@ -1,0 +1,9 @@
+i {
+    position: absolute;
+    right: 2vw;
+    bottom: 2vw;
+    font-size: 40px;
+}
+.view-card {
+    position: relative;
+}

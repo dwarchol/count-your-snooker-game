@@ -24,12 +24,23 @@ export class Game {
         this.frames.push(new Frame(player))
     }
     newNextFrame(winner: number){
-
+        this.getFrame().setWinner(winner);
+        if(winner==1){
+            this.player1Frames++;
+        }
+        else{
+            this.player2Frames++;
+        }
+        var newPlayerToBreak = this.getLastPlayerToBreak()%2+1;
+        this.frames.push(new Frame(newPlayerToBreak))
     }
     getFrameNumber(): number{
         return this.frames.length;
     }
     getFrame(): Frame{
         return this.frames[this.frames.length-1];
+    }
+    getLastPlayerToBreak(){
+        return this.getFrame().playerToBreak;
     }
 }
